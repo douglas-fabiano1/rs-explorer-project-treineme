@@ -4,19 +4,40 @@
   box-sizing: border-box;
 }
 
+:root {
+  --fcolor-one: #1f1534;
+  --fcolor-two: #7d7987;
+  --fcolor-three: #89c5cc;
+  --fcolor-four: #fff;
+
+  --bgcolor-button: #69b99d;
+  --bgcolor-button-hover: var(--fcolor-three);
+
+  --ffamily-default: sans-serif;
+  --ffamily-one: "Open Sans", var(--ffamily-default);
+  --ffamily-two: "Mulish", var(--ffamily-default);
+  --ffamily-three: "DM Sans", var(--ffamily-default);
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    rgba(227, 255, 248, 0) 82.08%,
+    rgba(227, 255, 248, 0.38) 100%
+  );
+  min-height: 100vh;
+}
+
 .page {
   width: 1000px;
-
-  margin: 65px auto 0;
-
-  border: 1px solid green;
+  margin: 0 auto;
+  padding-top: 65px;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   margin-bottom: 58px;
 }
 
@@ -24,13 +45,101 @@ nav ul {
   display: flex;
   align-items: center;
   gap: 48px;
-
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
-li a {
+h1,
+ul {
+  font-family: var(--ffamily-two);
+}
+
+h1 {
+  font-size: 49px;
+  line-height: 56px;
+  font-weight: normal;
+  color: var(--fcolor-one);
+  width: 490px;
+}
+
+h1 span {
+  font-weight: bold;
+  color: var(--fcolor-three);
+}
+
+section p {
+  font-family: var(--ffamily-one);
+  color: var(--fcolor-two);
+  line-height: 28px;
+  font-size: 14px;
+
+  margin: 40px 0;
+}
+
+button {
+  font-family: var(--ffamily-three);
+  font-size: 16px;
+  color: var(--fcolor-four);
+
+  border: none;
+  border-radius: 4px;
+  padding: 14px 32px 15px;
+  background: var(--bgcolor-button);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button:hover {
+  background: var(--bgcolor-button-hover);
+  cursor: pointer;
+}
+
+a {
   text-decoration: none;
+}
+
+ul li a {
+  color: var(--fcolor-one);
+  font-size: 18px;
+  font-weight: normal;
+  opacity: 1;
+}
+
+ul li a:hover {
+  font-weight: bold;
+  color: var(--fcolor-three);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  line-height: 28px;
+  font-size: 14px;
+
+  text-align: center;
+
+  margin-top: 80px;
+}
+
+footer a {
+  color: var(--fcolor-one);
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--fcolor-three);
+}
+
+.balls {
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
